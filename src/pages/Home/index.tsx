@@ -32,7 +32,7 @@ interface CyclesContextType {
   activeCycleId: String | null
   amountSecondsPassed: number
   markCurrentCycleAsFinished: () => void
-  amountSecondsPassed: (seconds: number) => void
+  setSecondsPassed: (seconds: number) => void
 }
 
 // contexto para compartilhar as informações que os componentes filhos vão precisar
@@ -130,11 +130,7 @@ export function Home() {
           <FormProvider {...newCycleForm}>
             <NewCycleForm />
           </FormProvider>
-          <Countdown
-            activeCycle={activeCycle}
-            setCycles={setCycles}
-            activeCycleId={activeCycleId}
-          />
+          <Countdown />
         </CyclesContext.Provider>
 
         {activeCycle ? (
