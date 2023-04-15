@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { ReactNode, createContext, useState } from 'react'
 
 interface Cycle {

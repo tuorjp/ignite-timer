@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { FormContainer, MinutesAmountInput, TaskInput } from './styles'
 import { useContext } from 'react'
 import { useFormContext } from 'react-hook-form'
@@ -30,6 +31,7 @@ export function NewCycleForm() {
         placeholder="minutos"
         type="number"
         id="minutesAmount"
+        min={0}
         step={5}
         disabled={!!activeCycle}
         {...register('minutesAmount', { valueAsNumber: true })}
